@@ -1,0 +1,46 @@
+<h1>Athletes list</h1>
+<table class="table table-hover table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th>name</th>
+            <th>country</th>
+            <th>year</th>
+            <th>salary</th>
+            <th>advertisingContracts</th>
+            <th>total</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><input class="form-control" ng-model="newAthlete.name" /></td>
+            <td><input class="form-control" ng-model="newAthlete.country" /></td>
+            <td><input class="form-control" ng-model="newAthlete.year" /></td>
+            <td><input class="form-control" ng-model="newAthlete.salary" /></td>
+            <td><input class="form-control" ng-model="newAthlete.advertisingContracts" /></td>
+            <td><input class="form-control" ng-model="newAthlete.total" /></td>
+            <td><button class="button btn-primary" ng-click="addAthlete()">
+                Add
+            </button></td>
+        </tr>
+        <tr ng-repeat="athlete in athletes">
+            <td><a href="/App.html#!/athletes/{{athlete.name}}">{{athlete.name}}</a></td>
+            <td>{{athlete.country}}</td>
+            <td>{{athlete.year}}</td>
+            <td>{{athlete.salary}}</td>
+            <td>{{athlete.advertisingContracts}}</td>
+            <td>{{athlete.total}}</td>
+            <td><button class="button btn-danger" ng-click="deleteAthlete(athlete.name)">Delete</button></td>
+        </tr>
+    </tbody>
+    <body>
+        <tr align="rigth">
+            <td><button class="button btn-danger" ng-click="deleteAthletes()">Delete All</button></td>
+            <td><button class="button btn-warning" ng-click="loadInitialData()">Load Initial Data</button></td>
+        </tr>
+    </body>
+</table>
+<div><a href="/App.html#!/analytics/">Analytics graphs</a></div>
+<div><a href="/App.html#!/integrations/">Integration graphs</a></div>
+<hr/>
+<h8><i>{{status}}</i></h8>

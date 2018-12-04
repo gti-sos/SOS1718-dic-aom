@@ -1,0 +1,28 @@
+{
+  "name": "sos1718-dic-aom",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gti-sos/SOS1718-dic-aom.git"
+  },
+  "author": "Alvaro OM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gti-sos/SOS1718-dic-aom/issues"
+  },
+  "homepage": "https://github.com/gti-sos/SOS1718-dic-aom#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.10",
+    "nedb": "^1.8.0",
+    "request": "^2.88.0"
+  }
+}
