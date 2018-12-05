@@ -1,3 +1,8 @@
+/*global browser*/
+/*global element*/
+/*global expect*/
+/*global by*/
+
 var fs = require("fs");
 var path = require("path");
 var config = require("./config");
@@ -9,7 +14,6 @@ describe('Add athlete', function() {
             .then(function() {
                 element.all(by.repeater('athlete in athletes'))
                     .then(function(initialAthletes) {
-                        browser.driver.sleep(2000);
 
                         element(by.model('newAthlete.name')).sendKeys('Alvaro');
                         element(by.model('newAthlete.country')).sendKeys('España');

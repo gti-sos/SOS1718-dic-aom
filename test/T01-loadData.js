@@ -1,3 +1,8 @@
+/*global browser*/
+/*global element*/
+/*global expect*/
+/*global by*/
+ 
 var fs = require("fs");
 var path = require("path");
 var config = require("./config");
