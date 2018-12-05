@@ -1,0 +1,497 @@
+{
+	"info": {
+		"_postman_id": "25a82ab3-5f03-4483-94c4-5aa6633cd3c0",
+		"name": "SOS1718-dic-aom-highest-paid-athletes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b493fb53-a436-476e-af3f-1d6b24c901b5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests [\"Athletes list should have 5 or more athletes\"] = (jsonData.length >= 5);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4f6ba655-324c-4343-bfe6-e958af50fbbb",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Gareth Bale\",\n        \"country\": \"Gales\",\n        \"year\": 2018,\n        \"salary\": 30000000,\n        \"advertisingContracts\": 5900000,\n        \"total\": 35900000\n    }"
+				},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a59e4462-7901-4e4e-9717-10bc33e07730",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Gareth Bale",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0dd343c8-dd04-4608-97e9-7f55ba78b001",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Gareth Bale",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Gareth Bale"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Floyd Mayweather",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "44d8a2fe-7c40-46b9-944a-0c1ade48d535",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests [\"Athletes list should have 1\"] = (jsonData.length = 1);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Floyd Mayweather",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Floyd Mayweather"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Alvaro Ortega",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1de2028-0175-436d-8cc3-cab86825544a",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Alvaro Ortega",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Alvaro Ortega"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b56574d-0fc2-4868-a037-86d74ed0aeb5",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\n        \"name\": \"Lionel Messi\",\n        \"country\": \"Argentina\",\n        \"year\": 2018,\n        \"salary\": 0,\n        \"advertisingContracts\": 0,\n        \"total\": 0\n    }"
+				},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Cristiano Ronaldo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "faa626ea-d681-4ef8-9871-3e1fd025798d",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Cristiano Ronaldo\",\n        \"country\": \"Portugal\",\n        \"year\": 2050,\n        \"salary\": 0,\n        \"advertisingContracts\": 0,\n        \"total\": 0\n    }"
+				},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Cristiano Ronaldo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28b01f05-808a-49c7-a9c0-18d8af93cd39",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 409\", function () {",
+							"    pm.response.to.have.status(409);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Lionel Messi\",\n        \"country\": \"Argentina\",\n        \"year\": 2018,\n        \"salary\": 84000000,\n        \"advertisingContracts\": 27000000,\n        \"total\": 111000000\n    }"
+				},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2679775b-924b-49be-b97f-eee81f3f8425",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {",
+							"    pm.response.to.have.status(405);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes/Cristiano Ronaldo",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes",
+						"Cristiano Ronaldo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "674225f3-0526-4e2e-bb9c-6d5fb6393c70",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 400\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"name\": \"Alvaro\",\n        \"year\": 2018,\n        \"salary\": 275000000,\n        \"advertisingContracts\": 10000000,\n        \"total\": 285000000\n    }"
+				},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09969b0b-21df-4a68-b538-c389f6698d29",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://sos1718-dic-aom.herokuapp.com/api/v1/highest-paid-athletes",
+					"protocol": "https",
+					"host": [
+						"sos1718-dic-aom",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"highest-paid-athletes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

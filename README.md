@@ -3,7 +3,7 @@ Service Oriented Systems (Sistemas Orientados a Servicios) 2017/2018 at [Univers
 
 List of Projects registered in the course of **Service Oriented Systems** (2017/2018):
 
-## SOS1718-sep-aom
+## SOS1718-dic-aom
 
 - **Team**
   - [Álvaro Ortega Medina](https://github.com/alvortmed)
